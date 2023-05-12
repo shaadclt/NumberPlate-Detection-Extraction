@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Number Plate Detection and Extraction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        /* Custom CSS Styles */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url("static/images/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            flex: 1 0 auto;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
+        }
+
+        footer {
+            background-color: #000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        hr {
+            border-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <h1 class="display-5">Automatic Number Plate Detection and Extraction</h1>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <!-- Your content here -->
+        {% block body %}
+        
+        
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <a href="https://imshaad.in/"><h5>Developed By Mohamed Shaad</h5></a>
+    </footer>
+</body>
+</html>

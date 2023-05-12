@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <br><br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" class="form-control" name="image_name" required>
+                <input type="submit" value="Upload" class="btn btn-outline-secondary">
+            </div>
+        </form>
+    </div>
+
+    {% if upload %}
+        <div class="container">
+            <br><br>
+            <table>
+                <tr>
+                    <td>
+                        <img class="rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="">
+                    </td>
+                    <td>
+                        <img class="rounded float-right img-fluid" src="/static/predict/{{ upload_image }}" alt="">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <table style="border: solid black; width: 100%;">
+                <tr style="border: solid black;">
+                    <th>Number of Licence Plate Detected = {{no}}</th>
+                </tr>
+                
+                    {% for lic in text %}
+                    <tr style="border: solid black;">
+                    <td style="background-color: greenyellow;">
+                        <p class="display-8"> {{ lic }}</p>
+                    </td>
+                    </tr>
+                    {% endfor %}
+                
+            </table>
+
+        </div>
+    
+    
+   
+    {% endif %}
+
+{% endblock  %}
