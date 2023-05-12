@@ -4,4 +4,3 @@ matplotlib
 pytesseract
 gunicorn
 flask
-tesseract-ocr
