@@ -3,3 +3,4 @@ opencv-python
 matplotlib
 pytesseract
 gunicorn
+flask
