@@ -11,7 +11,7 @@ The goal of this project is to develop a system that can detect and extract numb
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/number-plate-detection.git
+   git clone https://github.com/shaadclt/Automatic-NumberPlate-Detection-YoloV5.git
    ```
 
 2. Install the required dependencies:
