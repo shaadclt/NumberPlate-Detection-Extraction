@@ -72,11 +72,15 @@ def extract_text(image,bbox):
     if 0 in roi.shape:
         return ''
     else:
-        roi_bgr = cv2.cvtColor(roi,cv2.COLOR_RGB2BGR)
-        gray = cv2.cvtColor(roi_bgr,cv2.COLOR_BGR2GRAY)
-        magic_color = apply_brightness_contrast(gray,brightness=40,contrast=70)
-        #text = pt.image_to_string(magic_color)
-        text = pt.image_to_string(magic_color,lang='eng',config='--psm 6')
+#         roi_bgr = cv2.cvtColor(roi,cv2.COLOR_RGB2BGR)
+#         gray = cv2.cvtColor(roi_bgr,cv2.COLOR_BGR2GRAY)
+#         magic_color = apply_brightness_contrast(gray,brightness=40,contrast=70)
+#         #text = pt.image_to_string(magic_color)
+#         text = pt.image_to_string(magic_color,lang='eng',config='--psm 6')
+#         text = text.strip()
+        reader = easyocr.Reader(['en'])
+        result = reader.readtext(roi)
+        text = ' '.join([res[1] for res in result])
         text = text.strip()
         
         return text
