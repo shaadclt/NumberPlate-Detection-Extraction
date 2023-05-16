@@ -4,3 +4,4 @@ matplotlib
 pytesseract
 gunicorn
 flask
+easyocr
