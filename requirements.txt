@@ -1,7 +1,6 @@
 numpy
 opencv-python
 matplotlib
-pytesseract
 gunicorn
 flask
 easyocr
