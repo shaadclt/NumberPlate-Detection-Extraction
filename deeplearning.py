@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-# import pytesseract as pt
+import pytesseract as pt
 import easyocr
 
 
@@ -66,9 +66,9 @@ def non_maximum_supression(input_image,detections):
     
     return boxes_np, confidences_np, index
 
-def extract_text(image,bbox):
-    x,y,w,h = bbox
-    
+def extract_text(image, bbox):
+    x, y, w, h = bbox
+
     roi = image[y:y+h, x:x+w]
     if 0 in roi.shape:
         return ''
@@ -76,14 +76,14 @@ def extract_text(image,bbox):
         roi_bgr = cv2.cvtColor(roi,cv2.COLOR_RGB2BGR)
         gray = cv2.cvtColor(roi_bgr,cv2.COLOR_BGR2GRAY)
         magic_color = apply_brightness_contrast(gray,brightness=40,contrast=70)
-#         #text = pt.image_to_string(magic_color)
-#         text = pt.image_to_string(magic_color,lang='eng',config='--psm 6')
-#         text = text.strip()
-        reader = easyocr.Reader(['en'])
-        result = reader.readtext(magic_color)
-        text = ' '.join([res[1] for res in result])
+        #text = pt.image_to_string(magic_color)
+        text = pt.image_to_string(magic_color,lang='eng',config='--psm 6')
         text = text.strip()
-        
+        # reader = easyocr.Reader(['en'])
+        # result = reader.readtext(magic_color)
+        # text = ' '.join([res[1] for res in result])
+        # text = text.strip()
+
         return text
 
 def drawings(image,boxes_np,confidences_np,index):
