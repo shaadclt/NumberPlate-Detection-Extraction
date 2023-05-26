@@ -1,10 +1,10 @@
 # Number Plate Detection and Extraction using YOLOv5 and EasyOCR
 
-This project demonstrates how to perform number plate detection and extraction using YOLOv5 for object detection and EasyOCR for optical character recognition.
+This project demonstrates how to perform number plate detection and extraction using YOLOv5 for object detection and Pytesseract for optical character recognition.
 
 ## Overview
 
-The goal of this project is to develop a system that can detect and extract number plates from images. The system utilizes the YOLOv5 object detection algorithm to locate the number plates in an image. Once the number plates are detected, EasyOCR is used to extract the text from the number plates.
+The goal of this project is to develop a system that can detect and extract number plates from images. The system utilizes the YOLOv5 object detection algorithm to locate the number plates in an image. Once the number plates are detected, Pytesseract is used to extract the text from the number plates.
 
 ## Installation
 
