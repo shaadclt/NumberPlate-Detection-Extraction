@@ -3,4 +3,4 @@ opencv-python
 matplotlib
 gunicorn
 flask
-easyocr
+pytesseract
