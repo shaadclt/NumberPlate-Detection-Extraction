@@ -1,4 +1,4 @@
-# Number Plate Detection and Extraction using YOLOv5, Tensorflow and Pytesseract
+# Number Plate Detection and Extraction
 
 This project demonstrates how to perform number plate detection and extraction using YOLOv5 for object detection, Tensorflow for Model Training and Pytesseract for optical character recognition.
 
@@ -11,7 +11,7 @@ The goal of this project is to develop a system that can detect and extract numb
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/shaadclt/NumberPlate-Detection-Extraction-YoloV5.git
+   git clone https://github.com/shaadclt/NumberPlate-Detection-Extraction.git
    ```
 
 2. Install the required dependencies:
